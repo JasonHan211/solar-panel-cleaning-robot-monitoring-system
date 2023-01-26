@@ -1,0 +1,20 @@
+<% let site = info.site; %>
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-center">
+        <div class="card rounded-3 shadow" >
+            <div class="m-5 p-3">
+                <h4 class="mb-3">Edit Installation Site</h4>
+                <%- include ('../partials/messages') %>
+                <form action="/sites/edit/<%= site.id %>?_method=PUT" method="POST">
+                    <%- include ('form') %>    
+                </form>
+            
+                <form method="POST" action="/sites/delete/<%= site.id %>?_method=DELETE">
+                    <button class="btn btn-danger w-100" type="submit">Delete</button>
+                </form>
+            
+                <a class="link-dark" href="/"> Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

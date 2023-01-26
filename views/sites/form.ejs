@@ -1,0 +1,55 @@
+<% let site = info.site; %>
+<hr>
+<div class="row">
+    <div class="col">
+        <h6>Person in charge</h6>
+        <label for="full_name">Full Name</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="full_name" placeholder="Enter Name" value="<%= typeof site.full_name != 'undefined' ? site.full_name : '' %>"/>
+        </div>
+        <label for="contact">Contact Number</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="contact" placeholder="Enter Number" value="<%= typeof site.contact != 'undefined' ? site.contact : '' %>"/>
+        </div>
+        <label for="email">Email</label>
+        <div class="mb-3">
+            <input class="form-control" type="email" name="email" placeholder="Enter email" value="<%= typeof site.email != 'undefined' ? site.email : '' %>"/>
+        </div>
+    </div>
+    <div class="col">
+        <h6>Site Details</h6>            
+        <label for="name">Name</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="name" placeholder="Enter Name" value="<%= typeof site.name != 'undefined' ? site.name : '' %>"/>
+        </div>
+        <label for="address">Address</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="address" placeholder="Enter Address" value="<%= typeof site.address != 'undefined' ? site.address : '' %>"/>
+        </div>
+        <label for="postcode">Postcode</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="postcode" placeholder="Enter Postcode" value="<%= typeof site.postcode != 'undefined' ? site.postcode : '' %>"/>
+        </div>
+        <label for="city">City</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="city" placeholder="Enter City" value="<%= typeof site.city != 'undefined' ? site.city : '' %>"/>
+        </div>
+        <label for="state">State</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="state" placeholder="Enter State" value="<%= typeof site.state != 'undefined' ? site.state : '' %>"/>
+        </div>
+    </div>
+    <div class="col">
+        <h6>For Weather Details</h6> 
+        <label for="lat">Latitude</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="lat" placeholder="Enter Latitude" value="<%= typeof site.lat != 'undefined' ? site.lat : '' %>"/>
+        </div>
+        <label for="long">Longitude</label>
+        <div class="mb-3">
+            <input class="form-control" type="text" name="long" placeholder="Enter Longitude" value="<%= typeof site.long != 'undefined' ? site.long : '' %>"/>
+        </div>
+    </div>
+</div>
+
+<button type="submit" class="btn btn-dark w-100"> Submit </button> 
